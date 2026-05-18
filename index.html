@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz App — Java & Testing</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <header class="header">
+      <div class="header-top">
+        <span class="app-title">QuizApp</span>
+        <span class="app-sub">Java &amp; Automation Testing</span>
+      </div>
+      <div class="progress-wrap">
+        <div class="progress-bar">
+          <div class="progress-fill" id="prog"></div>
+        </div>
+        <span class="progress-label" id="prog-label">0 / 10</span>
+      </div>
+    </header>
+
+    <main id="quiz-section">
+      <div class="q-card">
+        <div class="q-meta">
+          <span class="q-counter" id="qcount">Question 1 of 10</span>
+          <span class="q-badge" id="qtopic">Java</span>
+        </div>
+        <div class="q-diff" id="qdiff">Beginner</div>
+        <p class="q-text" id="qtext"></p>
+        <div class="options-grid" id="opts"></div>
+        <div class="feedback-box" id="feedback"></div>
+        <div class="nav-row">
+          <button class="next-btn hidden" id="nextbtn" onclick="nextQ()">Next &rarr;</button>
+        </div>
+      </div>
+    </main>
+
+    <section id="score-section" class="score-card hidden">
+      <div class="score-icon">&#127881;</div>
+      <h2 class="score-title">Quiz Complete!</h2>
+      <div class="score-big" id="scorebig"></div>
+      <p class="score-out">out of 10 questions</p>
+      <p class="score-msg" id="scoremsg"></p>
+      <div class="stat-row">
+        <div class="stat">
+          <div class="stat-n correct-color" id="s-correct"></div>
+          <div class="stat-t">Correct</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n wrong-color" id="s-wrong"></div>
+          <div class="stat-t">Wrong</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n" id="s-pct"></div>
+          <div class="stat-t">Score %</div>
+        </div>
+      </div>
+      <button class="restart-btn" onclick="restart()">&#8635; Try Again</button>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
